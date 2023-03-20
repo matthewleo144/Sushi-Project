@@ -1,0 +1,1 @@
+sass responsive-sushi-website/assets/scss/app.scss css/app.css -w --style=compressed
