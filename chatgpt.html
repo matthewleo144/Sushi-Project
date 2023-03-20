@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+        perspective: 800px;
+        }
+
+        .cube {
+        position: relative;
+        margin: 0 auto;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        }
+
+        .side {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        font-size: 72px;
+        color: white;
+        line-height: 200px;
+        text-align: center;
+        }
+
+        .front {
+        background-color: blue;
+        transform: translateZ(100px);
+        }
+
+        .back {
+        background-color: green;
+        transform: translateZ(-100px) rotateY(180deg);
+        }
+
+        .right {
+        background-color: red;
+        transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .left {
+        background-color: orange;
+        transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+        background-color: purple;
+        transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+        background-color: yellow;
+        transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .cube:hover {
+        transform: rotateX(360deg) rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+          <div class="side front">1</div>
+          <div class="side back">6</div>
+          <div class="side right">2</div>
+          <div class="side left">5</div>
+          <div class="side top">4</div>
+          <div class="side bottom">3</div>
+        </div>
+      </div>
+
+</body>
+</html>
